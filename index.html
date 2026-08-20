@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    button{
+background-color: gold;
+color: azure;
+font-family: fantasy;
+border-radius: 20px 0px 10px 5px;
+padding: 10px;
+margin-left: 20px;
+}
+
+</style> 
+</head>
+<body>
+   <h1>hola</h1>
+   <p id="textito">ingresar altura y peso</p>
+   <input onchange="mi_funcion()" type="number" id="altura" min="0.0" max="2.5">
+   <input onchange="mi_funcion()" type="number" id="peso" min="0.00" max="1000">
+<button onclick="mi_funcion()">enter</button>
+<img id="foto" src="./agregar imagenes html/IMC1.jpg" alt="">
+</body>
+<script type="text/javascript">
+function mi_funcion(){
+    var imx = peso.value /(altura.value * altura.value);
+    textito.innerText = imx;
+    if (imx < 18){
+       foto.src = "./agregar imagenes html/IMC1.jpg";
+    }else  if (imx > 18 && imx < 25){
+        foto.src = "./agregar imagenes html/IMC2.jpg";
+        
+    }else  if (imx > 25 && imx < 30){
+        foto.src = "./agregar imagenes html/IMC3.jpg";
+        
+    }else  if (imx > 30 && imx < 35){
+        foto.src = "./agregar imagenes html/IMC4.jpg";
+        
+    }else  if (imx > 35 && imx < 1000){
+        foto.src = "./agregar imagenes html/IMC5.jpg";
+        
+    }
+}
+</script>
+</html>
+
+   
